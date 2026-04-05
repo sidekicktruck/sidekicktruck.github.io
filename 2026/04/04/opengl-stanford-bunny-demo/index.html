@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>opengl-stanford-bunny-demo | sidekicktruck&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="IntroductionThe Stanford Bunny is one of the most iconic 3D models in computer graphics. Originally created by Greg Turk and Marc Levoy at Stanford University, this polygonal model has become a standa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="opengl-stanford-bunny-demo">
+<meta property="og:url" content="https://sidekicktruck.github.io/2026/04/04/opengl-stanford-bunny-demo/index.html">
+<meta property="og:site_name" content="sidekicktruck&#39;s blog">
+<meta property="og:description" content="IntroductionThe Stanford Bunny is one of the most iconic 3D models in computer graphics. Originally created by Greg Turk and Marc Levoy at Stanford University, this polygonal model has become a standa">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-04T15:55:41.000Z">
+<meta property="article:modified_time" content="2026-04-04T15:56:36.596Z">
+<meta property="article:author" content="sidekicktruck">
+<meta property="article:tag" content="3D Graphics">
+<meta property="article:tag" content="Computer Graphics">
+<meta property="article:tag" content="OpenGL">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sidekicktruck's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sidekicktruck&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">人只能自救</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sidekicktruck.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-opengl-stanford-bunny-demo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/04/opengl-stanford-bunny-demo/" class="article-date">
+  <time class="dt-published" datetime="2026-04-04T15:55:41.000Z" itemprop="datePublished">2026-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      opengl-stanford-bunny-demo
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The Stanford Bunny is one of the most iconic 3D models in computer graphics. Originally created by Greg Turk and Marc Levoy at Stanford University, this polygonal model has become a standard test model for 3D graphics algorithms and rendering techniques.</p>
+<h2 id="What-is-the-Stanford-Bunny"><a href="#What-is-the-Stanford-Bunny" class="headerlink" title="What is the Stanford Bunny?"></a>What is the Stanford Bunny?</h2><p>The Stanford Bunny is a 3D model consisting of approximately 69,451 vertices and 138,752 triangles. It was acquired using a 3D range scanner and has been used extensively in computer graphics research and education. The model is freely available and has become a de facto standard for benchmarking 3D graphics applications.</p>
+<h2 id="OpenGL-Implementation"><a href="#OpenGL-Implementation" class="headerlink" title="OpenGL Implementation"></a>OpenGL Implementation</h2><p>In this demo, we implement:</p>
+<ul>
+<li>3D model loading and rendering</li>
+<li>Camera controls and rotation</li>
+<li>Lighting and shading</li>
+<li>Texture mapping</li>
+<li>Interactive mouse and keyboard controls</li>
+</ul>
+<h3 id="Key-Features"><a href="#Key-Features" class="headerlink" title="Key Features"></a>Key Features</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Initialize OpenGL context</span></span><br><span class="line"><span class="built_in">glClearColor</span>(<span class="number">0.1f</span>, <span class="number">0.1f</span>, <span class="number">0.1f</span>, <span class="number">1.0f</span>);</span><br><span class="line"><span class="built_in">glEnable</span>(GL_DEPTH_TEST);</span><br><span class="line"><span class="built_in">glEnable</span>(GL_LIGHTING);</span><br><span class="line"><span class="built_in">glEnable</span>(GL_LIGHT0);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Model-Rendering"><a href="#Model-Rendering" class="headerlink" title="Model Rendering"></a>Model Rendering</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">glPushMatrix</span>();</span><br><span class="line"><span class="built_in">glTranslatef</span>(x, y, z);</span><br><span class="line"><span class="built_in">glRotatef</span>(angleX, <span class="number">1.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line"><span class="built_in">glRotatef</span>(angleY, <span class="number">0.0f</span>, <span class="number">1.0f</span>, <span class="number">0.0f</span>);</span><br><span class="line"><span class="built_in">drawBunnyModel</span>();</span><br><span class="line"><span class="built_in">glPopMatrix</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Controls"><a href="#Controls" class="headerlink" title="Controls"></a>Controls</h2><ul>
+<li><strong>Mouse</strong>: Drag to rotate the model</li>
+<li><strong>Scroll Wheel</strong>: Zoom in&#x2F;out</li>
+<li><strong>Space</strong>: Reset camera</li>
+<li><strong>L</strong>: Toggle lighting</li>
+<li><strong>W</strong>: Toggle wireframe mode</li>
+</ul>
+<h2 id="Performance-Considerations"><a href="#Performance-Considerations" class="headerlink" title="Performance Considerations"></a>Performance Considerations</h2><ul>
+<li>Use Vertex Buffer Objects (VBO) for efficient rendering</li>
+<li>Implement frustum culling to skip off-screen geometry</li>
+<li>Consider Level of Detail (LOD) for distant objects</li>
+<li>Profile and optimize the rendering pipeline</li>
+</ul>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://graphics.stanford.edu/data/3Dscanrep/">Stanford 3D Scanning Repository</a></li>
+<li><a target="_blank" rel="noopener" href="https://learnopengl.com/">Learn OpenGL</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.khronos.org/opengl/wiki/">Khronos OpenGL Wiki</a></li>
+</ul>
+<p>This demo showcases fundamental concepts in 3D computer graphics and provides a foundation for more advanced graphics programming techniques.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sidekicktruck.github.io/2026/04/04/opengl-stanford-bunny-demo/" data-id="cuid861HOiHTW8pb6ZzYqy5uo" data-title="opengl-stanford-bunny-demo" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/3D-Graphics/" rel="tag">3D Graphics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Computer-Graphics/" rel="tag">Computer Graphics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OpenGL/" rel="tag">OpenGL</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/04/04/Quick-Start/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Quick Start</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D-Graphics/" rel="tag">3D Graphics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Computer-Graphics/" rel="tag">Computer Graphics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL/" rel="tag">OpenGL</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3D-Graphics/" style="font-size: 10px;">3D Graphics</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/OpenGL/" style="font-size: 10px;">OpenGL</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/04/">四月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/04/04/opengl-stanford-bunny-demo/">opengl-stanford-bunny-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2026/04/04/Quick-Start/">Quick Start</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 sidekicktruck<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

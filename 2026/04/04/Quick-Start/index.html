@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Quick Start | sidekicktruck&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="更换电脑后，如何快速恢复 Hexo 博客更新环境这篇教程记录了我在新电脑上从 Git 仓库恢复博客写作环境的完整流程。目标是：最短时间恢复本地预览、写作、生成和部署能力。 一、前置条件开始前请确认本机已安装：  Node.js（建议 LTS 版本） npm Git  可用下面命令检查： 123node -vnpm -vgit -v  二、克隆仓库12git clone https:&#x2F;&#x2F;github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quick Start">
+<meta property="og:url" content="https://sidekicktruck.github.io/2026/04/04/Quick-Start/index.html">
+<meta property="og:site_name" content="sidekicktruck&#39;s blog">
+<meta property="og:description" content="更换电脑后，如何快速恢复 Hexo 博客更新环境这篇教程记录了我在新电脑上从 Git 仓库恢复博客写作环境的完整流程。目标是：最短时间恢复本地预览、写作、生成和部署能力。 一、前置条件开始前请确认本机已安装：  Node.js（建议 LTS 版本） npm Git  可用下面命令检查： 123node -vnpm -vgit -v  二、克隆仓库12git clone https:&#x2F;&#x2F;github">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-04T15:48:38.000Z">
+<meta property="article:modified_time" content="2026-04-04T15:56:45.547Z">
+<meta property="article:author" content="sidekicktruck">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="sidekicktruck's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">sidekicktruck&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">人只能自救</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sidekicktruck.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Quick-Start" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/04/Quick-Start/" class="article-date">
+  <time class="dt-published" datetime="2026-04-04T15:48:38.000Z" itemprop="datePublished">2026-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Quick Start
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="更换电脑后，如何快速恢复-Hexo-博客更新环境"><a href="#更换电脑后，如何快速恢复-Hexo-博客更新环境" class="headerlink" title="更换电脑后，如何快速恢复 Hexo 博客更新环境"></a>更换电脑后，如何快速恢复 Hexo 博客更新环境</h1><p>这篇教程记录了我在新电脑上从 Git 仓库恢复博客写作环境的完整流程。目标是：最短时间恢复本地预览、写作、生成和部署能力。</p>
+<h2 id="一、前置条件"><a href="#一、前置条件" class="headerlink" title="一、前置条件"></a>一、前置条件</h2><p>开始前请确认本机已安装：</p>
+<ul>
+<li>Node.js（建议 LTS 版本）</li>
+<li>npm</li>
+<li>Git</li>
+</ul>
+<p>可用下面命令检查：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、克隆仓库"><a href="#二、克隆仓库" class="headerlink" title="二、克隆仓库"></a>二、克隆仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/sidekicktruck/sidekicktruck.github.io.git</span><br><span class="line"><span class="built_in">cd</span> sidekicktruck.github.io</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、安装项目依赖"><a href="#三、安装项目依赖" class="headerlink" title="三、安装项目依赖"></a>三、安装项目依赖</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>如果你仓库里已经包含 package.json 和 package-lock.json，这一步会恢复 Hexo 及插件。</p>
+<h2 id="四、补齐容易漏掉的关键依赖"><a href="#四、补齐容易漏掉的关键依赖" class="headerlink" title="四、补齐容易漏掉的关键依赖"></a>四、补齐容易漏掉的关键依赖</h2><p>在新环境中最常见的问题是：</p>
+<ul>
+<li>页面提示 No layout</li>
+<li>hexo deploy 无法执行</li>
+</ul>
+<p>分别对应下面两个依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-landscape --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<ul>
+<li>hexo-theme-landscape 用于提供布局模板，缺失时会出现 No layout</li>
+<li>hexo-deployer-git 用于执行部署命令</li>
+</ul>
+<h2 id="五、确认-Hexo-安装状态"><a href="#五、确认-Hexo-安装状态" class="headerlink" title="五、确认 Hexo 安装状态"></a>五、确认 Hexo 安装状态</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p>如果看到 hexo 与 hexo-cli 版本信息，说明安装正常。</p>
+<h2 id="六、清理并重新生成"><a href="#六、清理并重新生成" class="headerlink" title="六、清理并重新生成"></a>六、清理并重新生成</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>若生成时没有 No layout 警告，说明主题和布局已恢复。</p>
+<h2 id="七、启动本地预览"><a href="#七、启动本地预览" class="headerlink" title="七、启动本地预览"></a>七、启动本地预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>浏览器访问：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000</span><br></pre></td></tr></table></figure>
+
+<p>如果提示端口占用（EADDRINUSE），用备用端口：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server -p 4001</span><br></pre></td></tr></table></figure>
+
+<h2 id="八、继续写博文"><a href="#八、继续写博文" class="headerlink" title="八、继续写博文"></a>八、继续写博文</h2><p>创建新文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>文章会生成在：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source/_posts/</span><br></pre></td></tr></table></figure>
+
+<p>编辑完成后，重新生成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<h2 id="九、部署到-GitHub-Pages"><a href="#九、部署到-GitHub-Pages" class="headerlink" title="九、部署到 GitHub Pages"></a>九、部署到 GitHub Pages</h2><p>确认配置文件 _config.yml 中 deploy 段落正确：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/sidekicktruck/sidekicktruck.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+
+<p>执行部署：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h2 id="十、一次性快速恢复命令"><a href="#十、一次性快速恢复命令" class="headerlink" title="十、一次性快速恢复命令"></a>十、一次性快速恢复命令</h2><p>如果你已经 clone 完仓库，通常可以直接执行下面这一组：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line">npm install hexo-theme-landscape hexo-deployer-git --save</span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>至此，新电脑环境就恢复完成，可以继续稳定更新博客。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sidekicktruck.github.io/2026/04/04/Quick-Start/" data-id="cuide3YjjEgEaZOARPVviDRMH" data-title="Quick Start" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/04/04/opengl-stanford-bunny-demo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          opengl-stanford-bunny-demo
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D-Graphics/" rel="tag">3D Graphics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Computer-Graphics/" rel="tag">Computer Graphics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL/" rel="tag">OpenGL</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3D-Graphics/" style="font-size: 10px;">3D Graphics</a> <a href="/tags/Computer-Graphics/" style="font-size: 10px;">Computer Graphics</a> <a href="/tags/OpenGL/" style="font-size: 10px;">OpenGL</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/04/">四月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/04/04/opengl-stanford-bunny-demo/">opengl-stanford-bunny-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2026/04/04/Quick-Start/">Quick Start</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 sidekicktruck<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
