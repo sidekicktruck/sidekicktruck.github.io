@@ -81,12 +81,34 @@ $ git tag v0 c1
 $ git tag v1 c2
 $ git checkout v1
 4.5
-
+$ git commit
 ```
 5: Rebasing over 9000 times
 ```
 5.1
+$ git checkout bugFix
+$ git rebase c2
+$ git checkout side
+$ git rebase c3'
+$ git checkout another
+$ git rebase c6'
+$ git branch -f main c7'
 5.2
+$ git branch -f bugWork HEAD^^2^
 5.3
-
+$ git checkout one
+$ git cherry-pick c4 c3 c2
+$ git checkout two
+$ git cherry-pick c5 c4 c3' c2'
+$ git branch -f three c2
+```
+6:push$pull
+```
+6.1
+$ git clone
+6.2
+```
+7:关于 origin 和它的周边
+```
+7.1
 ```
