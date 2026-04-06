@@ -5,9 +5,12 @@ date: 2026-04-06 12:53:46
 tags: 
     - git
 ---
-this article record the answers ref to this site:
+this article records the answers ref to this site:
 https://learngitbranching.js.org/
+
 1: Introduction to Git Commits
+```
+# use "undo" to undo ur work
 1.1
 $ git commit
 $ git commit
@@ -29,16 +32,61 @@ $ git checkout main
 $ git commit
 $ git checkout bugFix
 $ git rebase main
+```
+
 2: Detach yo' HEAD
+```
 2.1
+
+$ git checkout c4
 2.2
+$ git checkout HEAD^
 2.3
-3.4
+$ git branch -f main c6
+$ git checkout HEAD^
+$ git branch -f bugFix c0
+2.4
+$ git reset c1
+$ git checkout pushed
+$ git revert c2
+```
 3: Cherry-pick Intro
+
+```
+3.1
+$ git cherry-pick c3 c4 c7
 3.2
+# grab/cancel after this command
+$ git rebase overHere -i
+3.3
+$ git checkout main
+$ git cherry-pick c4
+```
 4: Grabbing Just 1 Commit
+```
+4.1
+$ git checkout main
+$ git cherry-pick c4
+4.2
+$ git rebase -i HEAD~2
+$ git commit --amend
+$ git rebase -i HEAD~2
+$ git branch -f main c3''
+4.3
+$ git rebase -i HEAD~2
+$ git checkout main
+$ git cherry-pick c2' c3
+4.4
+$ git tag v0 c1
+$ git tag v1 c2
+$ git checkout v1
 4.5
+
+```
 5: Rebasing over 9000 times
+```
 5.1
 5.2
 5.3
+
+```
