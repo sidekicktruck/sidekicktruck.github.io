@@ -1,15 +1,13 @@
-# source/_data/shuoshuo.yml
-- author: sidekicktruck     
-  avatar: /img/avatar.png
-  date: 2024-04-06 23:33:26
+- author: Butterfly
+  avatar: https://butterfly.js.org/img/avatar.png
+  date: 2024-06-21 23:33:26
   key: key-1
   content: |
-    这是第一条说说内容，支持 **Markdown** 格式！
-    可以换行，也可以放图片。
+    This is a sample content for **Author 1**.
+    ![Sample Image](https://via.placeholder.com/150)
   tags:
-    - 心情
-    - 日常
-
+    - tags1
+    - tags2
 - author: Butterfly
   avatar: https://butterfly.js.org/img/avatar.png
   date: 2024-06-20 23:33:26
@@ -27,5 +25,3 @@
   key: key-3
   content: |
     This is a sample content for **Author 3**.
-  tags:
-    - tag3

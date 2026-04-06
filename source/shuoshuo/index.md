@@ -1,7 +1,5 @@
 ---
-layout: page
-title: 说说
-date: 2026-04-06 12:15:44
-tags:
-type:“shuoshuo”
+title: 説説
+date: 2018-06-07 22:17:49
+type: 'shuoshuo'
 ---
