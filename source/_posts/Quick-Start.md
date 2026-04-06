@@ -31,6 +31,10 @@ git -v
 git clone https://github.com/sidekicktruck/sidekicktruck.github.io.git
 cd sidekicktruck.github.io
 ```
+本仓库采用双分支配置
+源码 -> main
+hexo d -> gh-pages
+
 
 ## 三、安装项目依赖
 
