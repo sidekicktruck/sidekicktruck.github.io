@@ -8,7 +8,7 @@ tags:
 this article records the answers ref to this site:
 https://learngitbranching.js.org/
 
-1: Introduction to Git Commits
+## 1: Introduction to Git Commits
 ```
 # use "undo" to undo ur work
 1.1
@@ -34,7 +34,7 @@ $ git checkout bugFix
 $ git rebase main
 ```
 
-2: Detach yo' HEAD
+## 2: Detach yo' HEAD
 ```
 2.1
 
@@ -50,7 +50,7 @@ $ git reset c1
 $ git checkout pushed
 $ git revert c2
 ```
-3: Cherry-pick Intro
+## 3: Cherry-pick Intro
 
 ```
 3.1
@@ -62,7 +62,7 @@ $ git rebase overHere -i
 $ git checkout main
 $ git cherry-pick c4
 ```
-4: Grabbing Just 1 Commit
+## 4: Grabbing Just 1 Commit
 ```
 4.1
 $ git checkout main
@@ -83,7 +83,7 @@ $ git checkout v1
 4.5
 $ git commit
 ```
-5: Rebasing over 9000 times
+## 5: Rebasing over 9000 times
 ```
 5.1
 $ git checkout bugFix
@@ -102,13 +102,74 @@ $ git checkout two
 $ git cherry-pick c5 c4 c3' c2'
 $ git branch -f three c2
 ```
-6:push$pull
+## 6:push$pull
 ```
 6.1
 $ git clone
 6.2
+$ git commit
+$ git checkout o/main
+$ git commit
+6.3
+$ git fetch
+6.4
+$ git pull
+6.5
+$ git clone
+$ git fakeTeamwork 2
+$ git fetch
+$ git commit
+$ git pull
+6.6
+$ git commit
+$ git commit
+$ git push
+6.7
+git clone
+git fakeTeamwork
+git commit
+git pull --rebase
+git push
+6.8
+$ git branch feature
+$ git push origin feature
+local branch "feature" set to track remote branch "o/feature"
+$ git branch -f main HEAD^
+$ git checkout feature
+
+
+
+
 ```
-7:关于 origin 和它的周边
+## 7:关于 origin 和它的周边
 ```
 7.1
+$ git fetch
+
+$ git rebase o/main side1
+
+$ git rebase side1 side2
+
+$ git rebase side2 side3
+
+$ git rebase side3 main
+
+快速前进...
+
+$ git push
+7.2
+
+7.3
+
+7.4
+
+7.5
+
+7.6
+
+7.7
+
+7.8
+
+
 ```
