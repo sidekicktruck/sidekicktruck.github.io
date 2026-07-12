@@ -180,4 +180,56 @@ sudo usermod -aG docker $USER
 ```
 
 ## 6. 加cpp hello world 进dockerfile并编译运行
+新建`main.cpp`文件，目录结构如下
+```text
+docker-trt-demo/
+├── Dockerfile
+└── src/
+    └── main.cpp
+```
+编写cpp程序
+```cpp
+#include <iostream>
 
+int main() {
+    std::cout << "Hello from C++ in Docker!" << std::endl;
+    return 0;
+}
+```
+写`dockerfile`
+```dockerfile
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
+
+# 安装 C++ 编译环境
+RUN apt-get update && \
+    apt-get install -y build-essential && \
+    rm -rf /var/lib/apt/lists/*
+
+# 设置工作目录
+WORKDIR /app
+
+# 拷贝源码
+COPY src/main.cpp .
+
+# 编译（构建阶段）
+RUN g++ main.cpp -o hello
+
+# 容器启动时运行程序
+CMD ["./hello"]
+```
+构建镜像
+```bash
+docker build -t cpp-hello .
+```
+运行容器
+```bash
+docker run --rm cpp-hello
+```
+预期输出
+```
+Hello from C++ in Docker!
+```
+至此完成了一次完整 cpp 编译 + 运行

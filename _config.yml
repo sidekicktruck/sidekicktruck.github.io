@@ -90,5 +90,5 @@ theme_config: _config.butterfly.yml
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/sidekicktruck/sidekicktruck.github.io.git
+  repo: git@github.com:sidekicktruck/sidekicktruck.github.io.git
   branch: gh-pages
