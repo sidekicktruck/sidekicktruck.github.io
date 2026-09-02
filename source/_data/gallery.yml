@@ -11,19 +11,23 @@
 #   img   - 图片路径(必填,建议 /images/works/xxx.jpg)
 #   tag   - 分类标签(选填,如:水彩 / 素描 / 板绘 / 速写)
 #   date  - 完成日期 YYYY-MM-DD(选填,画廊按它倒序排列)
+#   note  - 一句感想(选填,点开大图时显示在标题下方,卡片上也露出一行)
 # ============================================
 
 - name: 占位画作 · 水彩
   img: /images/works/watercolor.svg
   tag: 水彩
   date: 2026-07-01
+  note: 画到一半差点想撕掉,后来把留白加大,反而透气了。天空那抹灰蓝是拿纸巾吸出来的。
 
 - name: 占位画作 · 速写
   img: /images/works/sketch.svg
   tag: 速写
   date: 2026-06-20
+  note: 地铁里十五分钟画的,线条歪点没关系,抓到感觉就行。
 
 - name: 占位画作 · 板绘
   img: /images/works/digital.svg
   tag: 板绘
   date: 2026-05-30
+  note: 第一次认真画板绘,颜色一直叠不对,最后把饱和度全降下来,反而对了。

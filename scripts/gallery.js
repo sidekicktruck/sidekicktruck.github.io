@@ -59,16 +59,21 @@ function render(items) {
 
   const cards = items
     .map((it, i) => {
-      // 作品名已含分类时不重复追加
       const name = esc(it.name || '');
-      const caption = it.tag && name.indexOf(it.tag) === -1
-        ? name + ' · ' + esc(it.tag)
-        : name;
+      // 作品名已含分类时不重复追加
+      const tagTxt = it.tag && name.indexOf(it.tag) === -1 ? ' · ' + esc(it.tag) : '';
+      // 灯箱标题:名字 · 分类 + 感想(单独一行,小字)
+      const lbNote = it.note ? `<span class="works-lb-note">${esc(it.note)}</span>` : '';
+      const caption = name + tagTxt + lbNote;
       const date = it.date ? `<time class="works-date">${esc(it.date.slice(0, 7))}</time>` : '';
+      const cardNote = it.note ? `<p class="works-note">${esc(it.note)}</p>` : '';
       return `<figure class="works-item" data-tags="${esc(it.tag)}" style="animation-delay:${Math.min(i, 12) * 50}ms">
   <a class="works-link" href="${esc(it.img)}" data-fancybox="works" data-caption="${caption}">
     <img class="works-img" src="${esc(it.img)}" alt="${esc(it.name)}" loading="lazy">
-    <figcaption class="works-cap"><span class="works-name">${esc(it.name)}</span>${date}</figcaption>
+    <figcaption class="works-cap">
+      <div class="works-cap-top"><span class="works-name">${name}</span>${date}</div>
+      ${cardNote}
+    </figcaption>
   </a>
 </figure>`;
     })

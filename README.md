@@ -40,6 +40,7 @@ npx hexo server      # 本地预览 http://localhost:4000
   img: /images/works/文件名.jpg
   tag: 水彩            # 可选:水彩 / 素描 / 板绘 / 速写 ...
   date: 2026-07-12     # 可选,画廊按日期倒序排列
+  note: 一句感想       # 可选,点开大图时显示在标题下方,卡片上也露出一行
 ```
 
 3. 跑 `./deploy.sh` 上线。
