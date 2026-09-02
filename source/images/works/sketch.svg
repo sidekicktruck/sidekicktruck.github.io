@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#faf7f1"/>
+  <g fill="none" stroke="#5b554b" stroke-linecap="round" opacity=".85">
+    <path d="M150 320 Q 300 240 520 300 T 640 260" stroke-width="14"/>
+    <path d="M160 360 Q 340 290 560 350 T 660 330" stroke-width="8" opacity=".6"/>
+    <circle cx="560" cy="560" r="150" stroke-width="12"/>
+    <circle cx="560" cy="560" r="96" stroke-width="6" opacity=".5"/>
+    <path d="M180 700 Q 320 640 460 690 T 640 660" stroke-width="10"/>
+    <path d="M140 150 Q 200 90 270 140" stroke-width="6" opacity=".5"/>
+  </g>
+  <text x="400" y="880" font-family="Georgia, 'Microsoft YaHei', serif" font-size="44" fill="#8a7f6f" text-anchor="middle" letter-spacing="4">速写占位</text>
+</svg>
