@@ -63,7 +63,10 @@ function render(items) {
       // 作品名已含分类时不重复追加
       const tagTxt = it.tag && name.indexOf(it.tag) === -1 ? ' · ' + esc(it.tag) : '';
       // 灯箱标题:名字 · 分类 + 感想(单独一行,小字)
-      const lbNote = it.note ? `<span class="works-lb-note">${esc(it.note)}</span>` : '';
+      // 注意:data-caption 属性里不能出现裸双引号,span 标签用 HTML 实体编码
+      const lbNote = it.note
+        ? `&lt;span class=&quot;works-lb-note&quot;&gt;${esc(it.note)}&lt;/span&gt;`
+        : '';
       const caption = name + tagTxt + lbNote;
       const date = it.date ? `<time class="works-date">${esc(it.date.slice(0, 7))}</time>` : '';
       const cardNote = it.note ? `<p class="works-note">${esc(it.note)}</p>` : '';
