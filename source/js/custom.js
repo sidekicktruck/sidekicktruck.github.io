@@ -40,4 +40,13 @@
       }
     } catch (e) { /* 忽略:主题已接管 fancybox */ }
   }
+/* --- 3. 横向作品按自身比例标记,卡片用 3:2 画框 --- */
+  document.querySelectorAll('.works-img').forEach(function (img) {
+    var apply = function () {
+      if (img.naturalWidth > 0 && img.naturalWidth > img.naturalHeight) {
+        img.classList.add('is-wide');
+      }
+    };
+    if (img.complete) { apply(); } else { img.addEventListener('load', apply); }
+  });
 })();

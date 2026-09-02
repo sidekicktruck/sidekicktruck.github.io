@@ -246,6 +246,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 20px;
+  align-items: start;
 }
 
 .works-item {
@@ -285,6 +286,11 @@ html {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   transition: transform .5s ease;
+}
+
+/* 横向作品(由 JS 按图片比例标记)用 3:2 画框,减少裁切 */
+.works-img.is-wide {
+  aspect-ratio: 3 / 2;
 }
 
 .works-item:hover .works-img {

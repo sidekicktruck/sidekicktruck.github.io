@@ -14,6 +14,18 @@
 #   note  - 一句感想(选填,点开大图时显示在标题下方,卡片上也露出一行)
 # ============================================
 
+- name: 习作 · 海边日落
+  img: /images/works/习作-海边日落.png
+  tag: 板绘
+  date: 2026-09-02
+  note: 日落的那一点暖,足够撑过整个凉夜。
+
+- name: 习作 · 山地废墟
+  img: /images/works/习作-山地废墟.png
+  tag: 板绘
+  date: 2026-09-02
+  note: 残墙不语,山风替它讲了千年的故事。
+
 - name: 占位画作 · 水彩
   img: /images/works/watercolor.svg
   tag: 水彩
