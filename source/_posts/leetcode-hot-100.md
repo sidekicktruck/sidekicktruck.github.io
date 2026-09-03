@@ -34,16 +34,27 @@ tags:
 
 ```
 
-
 128 最长连续序列（中等）
 
+先去重，然后找顺子的开头，即找x-1在不在，对着找表里是否存在x+1，更新计数器
 
+```
+    num_set= set(nums)
+    longest=0
+    for x in num_set:
+        if x-1 in num_set:
+            continue
 
+        current=x
+        length=1    
+        while current+1 in num_set:
+            current+=1
+            length+=1
+        longest=max(longest,length)
 
+    return longest
 
-
-
-
+```
 
 双指针
 
